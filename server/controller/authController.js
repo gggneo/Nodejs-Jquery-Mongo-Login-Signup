@@ -1,6 +1,7 @@
 var User=require('../dataset/users.js');
 
 module.exports.signup=function(req,res){
+	    console.log(req.body);
     User.find(req.body,(err,response)=>{
         if(response && response.length==0){
             User.create({
